@@ -11,7 +11,7 @@ Write code to perform the following tasks using the filter method:
 const newArray = numbers.filter((number) => number >= 25);
 console.log(newArray);
 
-const divisibleByFive = numbers.filter((number) => number % 5 == 0);
+const divisibleByFive = numbers.filter((number) => number % 5 === 0);
 console.log(divisibleByFive);
 
 /*****************************************************************
@@ -23,13 +23,13 @@ Write code to perform the following tasks using the map method:
 4) Create a new array that contains each number multiplied by 2.
 ******************************************************************/
 
-const squares = numbers.map(function (number) {
+const squares = numbers.map((number) => {
   return number * number;
 });
 
 console.log(squares);
 
-const multipli = numbers.map(function (number) {
+const multipli = numbers.map((number) => {
   return number * 2;
 });
 
@@ -45,13 +45,13 @@ Combine the filter and map methods to perform the following tasks:
 ******************************************************************/
 
 const greaterThanOr = numbers.filter((number) => number >= 20);
-const squaresgreaterThanOr = greaterThanOr.map(function (number) {
+const squaresgreaterThanOr = greaterThanOr.map((number) => {
   return number * number;
 });
 console.log(greaterThanOr);
 console.log(squaresgreaterThanOr);
 
-const multipliBythree = divisibleByFive.map(function (number) {
+const multipliBythree = divisibleByFive.map((number) => {
   return number * 3;
 });
 console.log(multipliBythree);
@@ -65,7 +65,7 @@ Part 4: Extra not required 🌶️🌶️🌶️
  * - Accepts an array
  * - Logs every element of the array
  ************************************/
-numbers.forEach((element) => {
+const logger = numbers.forEach((element) => {
   console.log(element);
 });
 
@@ -83,11 +83,8 @@ numbers.forEach((element) => {
 
 const fahrenheint = [20, 50, 100];
 
-const toCelsius = (temperatures) => {
-  return temperatures.map((temp) => (temp - 32) * (5 / 9));
-};
-
-console.log(toCelsius(fahrenheint));
+const toCelsius = fahrenheint.map((temp) => (temp - 32) * (5 / 9));
+console.log(toCelsius);
 
 /**************************************
  * hottestDays(temperatures, threshhold)
